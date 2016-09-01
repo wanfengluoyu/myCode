@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*外层div*/
+.center_div{
+	width: 1200px;
+	height: 920px;
+	background-image: url(../img/im_1.jpg);
+	margin: 0 auto;
+	padding-top: 15px;
+}
+/*第一层div*/
+.floor_1{
+	width: 1120px;
+	height: 210px;
+	background-color: rgba(144,123,142,0.95);
+	margin: 0 auto;
+	
+
+}
+.floor_1:hover{
+	background-color: rgba(52,18,52,1);
+}
+.floor_1_left{
+	display: block;
+	padding-top: 50px;
+	float: left;
+}
+.floor_1_left span{
+	color: rgb(255,251,191);
+	font-size: 60px;
+	font-family: "微软雅黑";
+	margin-left: 30px;
+	
+}
+.floor_1_left h2{
+	margin-left: 30px;
+	color: rgb(255,251,191);
+}
+
+/*第二层*/
+.floor_2{
+	width: 1120px;
+	height: 520px;
+	margin: 0 auto;
+	margin-top: 6px;
+}
+
+.floor_2_left{
+	width: 477px;
+	height: 470px;
+	margin-right: 3px;
+	background-color: rgba(144,123,142,0.95);
+	float: left;
+	padding-top: 50px;
+}
+ 
+.floor_2_left span{
+	margin-top: 25px;
+	display: block;
+	margin-left: 30px;
+	color: rgb(255,251,191);
+	font-size: 30px;
+}
+.floor_2_left:hover{
+	background-color: rgba(52,18,52,1);
+}
+.floor_2_right{
+	width: 617px;
+	height: 470px;
+	margin-left: 3px;
+	background-color: rgba(144,123,142,0.95);
+	float: left;
+	padding-top: 50px;
+	padding-left: 20px;
+}
+.floor_2_right img{
+	width: 248px;
+	height: 330px;
+}
+.floor_2_right p{
+	margin-right: 30px;
+	width: 280px;
+	height: 400px;
+	float: right;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: azure;
+}
+.floor_2_right:hover{
+	background-color: rgba(52,18,52,1);
+}
+/*第三层*/
+.floor_3{
+	width: 1200px;
+	height: 90px;
+	margin-left: 40px;
+	margin-top: 6px;
+}
+.floor_3_1{
+	width: 275px;
+	height: 90px;
+	background-color: rgba(144,123,142,0.95);
+	margin-right: 6px;
+	float: left;
+}
+.floor_3 div:hover{
+	background-color: rgba(52,18,52,1);
+}
+.floor_3_2{
+	width: 275px;
+	height: 90px;
+	background-color: rgba(144,123,142,0.95);
+	margin-right: 6px;
+	float: left;
+}
+.floor_3_3{
+	width: 275px;
+	height: 90px;
+	background-color: rgba(144,123,142,0.95);
+	margin-right: 6px;
+	float: left;
+}
+.floor_3_4{
+	width: 277px;
+	height: 90px;
+	background-color: rgba(144,123,142,0.95);
+	float: left;
+}
+.floor_3 h1{
+	line-height: 90px;
+	text-align: center;
+	color: white;
+}
