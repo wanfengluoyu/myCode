@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**{
+				margin: 0;
+				padding: 0;
+			}*/
+			#play_box{
+				border-radius: 30px;
+				width: 500px;
+				height: 350px;
+				background-color: aqua;
+				margin: 50px auto;
+				padding-top: 10px;
+			}
+			#csreen_div{
+				margin: 0 auto;
+				width: 400px;
+				height: 50px;
+				background-color: black;
+			}
+			h1{
+				color: white;
+				font-size: 25px;
+				line-height: 50px;
+			}
+			#voice{
+				width: 80px;
+				margin-left: 370px;
+				margin-top: 10px;
+			}
+			#voice_up{
+				display: block;
+				float: left;
+			}
+			#show_div{
+				float: left;
+
+			}
+			#voice_down{
+				display: block;
+				float: left;
+			}
+			#show_div{
+				overflow: hidden;
+				width: 30px;
+				height: 21px;
+				background-color: white;
+			}
+			progress{
+				width: 300px;
+				margin-left: 100px;
+				margin-top: 30px;
+				
+			}
+			#list{
+				width: 400px;
+				height: 140px;
+				background-color: azure;
+				margin: 10px auto;
+			}
+			#list ul{
+				margin: 0;
+				padding: 0;
+			}
+			#list li{
+				list-style-type: none;
+				width: 400px;
+				height: 27px;
+				border-bottom: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="play_box">
+			<!--标题-->
+			<div id="csreen_div">
+				<h1>day by day</h1>
+			</div>
+			
+			
+			<!--播放器-->
+			<audio src="img/T-Ara - Day By Day.mp3" ></audio>
+			
+			<!--音量-->
+			<div id="voice">
+				<button id="voice_down">-</button>
+				
+				<div id="show_div">
+					<span id="show">1</span>
+				</div>
+				<button id="voice_up">+</button>
+			</div>
+			
+			<!--进度条-->
+			<progress></progress>
+			
+			<!--播放按钮-->
+			<button id="play">播放</button>
+			
+			<div id="list">
+				<ul>
+					<li value="img/T-Ara - Day By Day.mp3" >T-Ara - Day By Day.mp3</li>
+					<li value="img/小小-容祖儿.mp3" >小小-容祖儿.mp3</li>
+					<li value="img/樊凡 - 我想大声告诉你.mp3" >樊凡 - 我想大声告诉你.mp3</li>
+					<li value="img/陈旭 - 哥只是个传说.mp3" >陈旭 - 哥只是个传说.mp3</li>
+					<li value="img/玄觞 - 芊芊.mp3" >玄觞 - 芊芊.mp3</li>
+				</ul>
+
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			var audio = document.querySelector("audio");
+			var play = document.querySelector("#play");
+			var progress = document.querySelector("progress");
+			var down = document.querySelector("#voice_down");
+			var up = document.querySelector("#voice_up");
+			var show = document.querySelector("#show");
+			var j = 1;
+			var lis = document.querySelectorAll("li");
+			var audio = document.querySelector("audio");
+			var the_url = "img/T-Ara - Day By Day.mp3";
+			var name_show = document.querySelector("h1");
+			
+			//音量初始值 1
+			
+			//进度条初始值 0
+			progress.value = 0;
+			play.onclick = function(){
+				if(audio.paused){
+					//暂停中，播放
+					audio.play();
+					play.innerText = "暂停";
+				}else{
+					audio.pause();
+					play.innerText = "播放";
+				}
+			}
+			
+			setInterval(function(){
+				progress.value = audio.currentTime/audio.duration;
+			},500);
+			
+			down.onclick = function(){
+				j=j-0.1;
+				audio.volume = j;
+				show.innerText = j.toFixed(1);
+			}
+			up.onclick = function(){
+				j=j+0.1;
+				audio.volume = j;
+				show.innerText = j.toFixed(1);
+			}
+			
+			for(var i = 0;i<lis.length;i++){
+				lis[i].onclick = function(){
+					console.log(this.getAttribute("value"));
+					audio.setAttribute("src",this.getAttribute("value"));
+					play.innerText = "播放";
+					var music = this.getAttribute("value");
+					var music_name = music.slice(4);
+					name_show.innerText = music_name;
+				}
+			}
+
+
+			
+		</script>
+		
+	</body>
+</html>
