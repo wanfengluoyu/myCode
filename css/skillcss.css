@@ -1,0 +1,59 @@
+#skill_div{
+	width: 1300px;
+	height: 700px;
+	background-image: url(../img/11098730_135106251837_2.jpg);
+	margin: 20px auto;
+}
+#skill_indiv{
+	width: 1300px;
+	height: 700px;
+	background-color: rgba(52,52,52,0.4);
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+#skill_div h1{
+	font-family: "微软雅黑";
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 50px;
+}
+#block_div2{
+	width: 90px;
+	height: 5px;
+	background-color: rgb(86,167,214);
+	margin: 10px auto;
+	margin-bottom: 70px;
+}
+#skill_1{
+	width: 500px;
+	height: 400px;
+	float: left;
+	margin-left: 125px;
+	/*border: 1px solid black;*/
+	margin-left: 50px;
+	padding-left: 20px;
+}
+
+#skill_1 p{
+	width: 400px;
+	line-height: 40px;
+}
+
+#skill_2{
+	box-sizing: border-box;
+	padding-left: 10px;
+	width: 500px;
+	height: 400px;
+	float: left;
+	margin-left: 50px;
+	/*border: 1px solid black;*/
+}
+#skill_2 img{
+	margin-bottom: 40px;
+}
+#skill_1 h2{
+	font-family: "微软雅黑";
+	color: white;
+	font-size: 20px;
+}
